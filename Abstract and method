@@ -1,0 +1,139 @@
+import java.lang.*;
+abstract class Shape
+{
+	protected float side;
+	protected double area;
+	protected double perimeter;
+	
+	Shape()
+	{
+		side=0.0f;
+	}
+	Shape(float newSide)
+	{
+		side=newSide;
+	}
+	public abstract void calculateArea();
+	public abstract void calculatePerimter();
+	
+	public void display()
+	{
+		System.out.println("\n Triangle Side : "+side+" Area : "+area+" Perimter : "+perimeter);
+		
+	}
+}
+
+class Triangle extends Shape 
+{		
+		Triangle(float newSide)
+		{
+			side=newSide;
+		}
+		public void calculateArea()
+		{
+			area=1/2*side*side;
+		}
+		public void calculatePerimter()
+		{
+			perimeter=side+side+side;
+		}
+}
+
+class Rectangle extends Shape
+{
+	Rectangle(float newSide)
+	{
+		side=newSide;
+	}
+	public void calculateArea()
+	{
+		area=side*side;
+	}
+	public void calculatePerimter()
+	{
+		perimeter=(side*2+side*2);
+	
+	}
+}
+
+class Square extends Shape
+{
+	Square(float newSide)
+	{
+		side=newSide;
+	}
+	public void calculateArea()
+	{
+		area=side*side;
+	}
+	public void calculatePerimter()
+	{
+		perimeter=(side*4);
+	}
+}
+
+class Cube extends Shape
+{
+	Cube(float newSide)
+	{
+		side=newSide;
+	}
+	public void calculateArea()
+	{
+		area=6*side*side;
+	}
+	public void calculatePerimter()
+	{
+		perimeter=12*side;
+	}
+}
+
+class Circle extends Shape
+{
+	Circle(float newSide)
+	{
+		side=newSide;
+	}
+	public void calculateArea()
+	{
+		area=3.14*side*side;
+	}
+	public void calculatePerimter()
+	{
+		perimeter=2*3.14*side;
+	}
+}
+
+
+class Abstract
+{
+	public static void main (String args[])
+	{
+		Shape s;
+		s=new Triangle(30);
+		s.calculateArea();
+		s.calculatePerimter();
+		s.display();
+		
+		s=new Rectangle(30);
+		s.calculateArea();
+		s.calculatePerimter();
+		s.display();
+		
+		s=new Square(30);
+		s.calculateArea();
+		s.calculatePerimter();
+		s.display();
+		
+		s=new Cube(30);
+		s.calculateArea();
+		s.calculatePerimter();
+		s.display();
+		
+		s=new Circle(30);
+		s.calculateArea();
+		s.calculatePerimter();
+		s.display();
+		
+	}
+}
