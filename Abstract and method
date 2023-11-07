@@ -1,18 +1,4 @@
-/*Program Title:- Create abstract class Shape which has instance variables side, area and
-perimeter And methods calculateArea(), calculatePerimeter() as abstract methods and display()
-as concrete method. Write subclasses which extend Shape class like Triangle, Rectangle, Circle,
-Cube and Squere and override abstract methods and display methods in subclass take instance
-variable if needed as per the formula. And use parameterized constructor to initialize instance
-variables using “this” reference variable. Write Test class and Create a reference variable of
-Shape which will hold the objects of all the sub classes and calculate respective area, perimeter
-and display the results.
-
-Developer:-SSM
-Version:-v1.0
-Program Code:-005
-
-*/
- import java.util.*;
+import java.util.*;
  abstract class Shape
 {
 protected float side;
@@ -120,7 +106,7 @@ public void calcaulatePerimeter()
 perimeter = 2*3.14*side;
 }
 }
-class Shape
+class Shape1
 {
 public static void main(String arga[]){
 Shape s;
