@@ -1,1 +1,154 @@
 
+import java.lang.*;
+import java.util.Scanner;
+
+class College
+{
+	// protected data member college name
+	protected String clgName;
+	
+	// default constructor
+	College()
+	{
+		clgName=" ";
+	}
+	
+	// parameterized constructor
+	College(String c1)
+	{
+		clgName=c1;
+	}
+	
+	// get method
+	public String getCLGNAME()
+	{
+		return clgName;
+	}
+	
+	// set method
+	public void setCLGNAME(String newCLGNAME)
+	{
+		this.clgName=newCLGNAME;
+	}
+}
+
+
+class Student extends College
+{
+	// private data member student name
+	private String name ;
+	// private data member student roll number
+	private int rollNo;
+	
+	// default constructor
+	Student()
+	{
+		name= "";
+		rollNo=0;
+	}
+	
+	// parameterized constructor
+	Student (String s1,int s2)
+	{
+		name=s1;
+		rollNo=s2;
+	}
+	
+	// get method
+		public String getNAME()
+	{
+		return name;
+	}
+		public int getROLLNO()
+	{
+		return rollNo;
+	}
+	
+	// set method
+	public void setNAME(String newNAME)
+	{
+		this.name=newNAME;
+	}
+	public void setROLLNO(int newROLLNO)
+	{
+		this.rollNo=newROLLNO;
+	}
+}
+
+class Staff extends College
+{
+	// private data member Staff name
+	private String staffName;
+	// private data member Staff id
+	private int id;
+	
+	// default constructor
+	Staff ()
+	{
+		staffName= "";
+		id=0;
+	}
+	
+	// parameterized constructor
+	Staff (String t1,int t2)
+	{
+		staffName= t1;
+		id=t2;
+	}
+	
+	// get method
+	public String getSTAFFNAME()
+	{
+		return staffName;
+	}
+		public int getID()
+	{
+		return id;
+	}
+	
+	
+	// set method
+	public void setSTAFFNAME(String newSTAFFNAME)
+	{
+		this.staffName=newSTAFFNAME;
+	}
+	public void setID(int newID)
+	{
+		this.id=newID;
+	
+	
+	}
+}
+
+class InheritanceMain
+{
+		public static void main(String args[])
+		// create object Student class 
+	{
+        Student e1=new Student();
+		Staff e2=new Staff();
+		Scanner sc=new Scanner(System.in);
+		
+		     // read data from user & display
+		System.out.println("\n\n-------------> Input Data <---------------");
+		System.out.println("\n\nEnter Student Name :" );
+			String tNAME=sc.next();
+		    e1.setNAME(tNAME);
+		
+		System.out.print("\n\nEnter Student Roll No: ");
+			int tROLLNO=sc.nextInt();
+			e1.setROLLNO(tROLLNO);
+
+		// create object Staff class 
+		
+		// read data from user & display
+		System.out.println("\n\nEnter Staff Name :");
+			String tSTAFFNAME=sc.next();
+		    e2. setSTAFFNAME(tSTAFFNAME);
+		
+		System.out.print("\n\nEnter Staff ID: ");
+			int tID=sc.nextInt();
+			e2.setID(tID);
+
+	}
+}
